@@ -6,9 +6,7 @@ const path = require('path');
 
 const moviesHtmlController = {
     'index': (req, res) => {
-        const filePath = path.join(process.cwd(), 'views/index.html'); // Ajusta la ruta según la ubicación real de tu archivo home.html
-
-        // Renderiza el archivo HTML
+        const filePath = path.join(process.cwd(), 'views/index.html'); 
         res.sendFile(filePath);
     }
 }

@@ -1,5 +1,6 @@
+
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
@@ -36,46 +37,79 @@ p {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
+
+.button-container {
+  text-align: center; 
+  margin-bottom: 20px; 
 }
 
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem; 
+}
+
+
 .card {
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
   border-radius: 12px;
   overflow: hidden;
+  padding: 10px;
   transition: all .2s linear;
+  flex: 1 1 calc(33% - 2rem);
+  margin: 0.5rem;
 }
 
 .card:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
   transform: translate3D(0, -2px, 0);
 }
-.action {
-  text-align: center;
+
+
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-/* Estilo para el botón de películas */
-.botonPeliculas {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-image:  linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+.title-container h1 {
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  padding: 0.5rem;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
-  transition: background-color 0.3s ease;
 }
 
-/* Cambiar el color de fondo del botón al pasar el mouse sobre él */
-.botonPeliculas:hover {
-  background-color: #2980b9;
+
+.star {
+  font-size: 24px;
+  color: #999; 
+  margin-left: 10px;
+  transition: color 0.3s, background 0.3s; 
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%); 
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-block;
 }
+
+.star.fas {
+  color: gold; 
+  background: #b0a0d4; 
+}
+
+.star.far {
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%); 
+}
+
+.star:hover {
+  cursor: pointer; 
+}
+
 
 .verMasButton {
   color: white;
@@ -84,19 +118,44 @@ p {
   padding: 10px 20px;
   border-radius: 10px;
   border: 0;
-  margin: 10px;
+  margin: 10px auto;
   cursor: pointer;
   text-transform: uppercase;
   transition: background-image 0.3s ease, transform 0.2s ease;
   display: inline-block;
+  width: auto;
 }
+
 
 .verMasButton:hover {
   background-image: linear-gradient(120deg, #8fd3f4 0%, #84fab0 100%);
   transform: translateY(-2px);
 }
 
-.botonAgregar , .botonModificar{
+.botonPeliculas {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.botonPeliculas:hover {
+  background-color: #2980b9;
+}
+
+.img-index {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  }
+
+.botonAgregar, .botonModificar {
   color: white;
   background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
   font-size: 1rem;
@@ -105,7 +164,8 @@ p {
   border: 0;
   margin: 5px;
 }
-.botonBorrar{
+
+.botonBorrar {
   color: white;
   background-image: linear-gradient(120deg, #BB2D3B 0%, #a6c1ee 100%);
   padding: 10px;
@@ -113,19 +173,62 @@ p {
   border: 0;
   margin: 5px;
 }
-.formulario{
+
+.formulario {
   margin: auto;
   width: 40%;
   border-radius: 10px;
 }
+
 .formulario label {
   padding: 1.5rem 2.5rem;
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
 }
-input, select{
+
+input, select {
   width: 60%;
   height: 25px;
+}
+
+
+.message-container {
+  margin-left: 20px;
+  text-align: center; 
+  margin-top: 20px; 
+  padding: 20px; 
+  border-radius: 10px; 
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  display: inline-block; 
+}
+
+
+.no-favorites-message {
+  font-size: 18px;
+  color: #333; 
+  font-weight: bold; 
+  margin: 0; 
+}
+
+
+#backButton {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  color: white;
+  height: 50px; 
+  border: none; 
+  padding: 0 15px; 
+  margin: 10px 0; 
+  cursor: pointer; 
+  border-radius: 5px;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  transition: background-image 0.3s ease; 
+}
+
+#backButton:hover {
+  background-image: linear-gradient(120deg, #8fd3f4 0%, #84fab0 100%); 
 }
 
 @media screen and (min-width: 600px) {
@@ -151,3 +254,9 @@ input, select{
 .card:nth-child(5n) h1 {
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
+
+
+
+
+
+

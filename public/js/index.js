@@ -3,15 +3,12 @@ window.onload = function(){
     let container = document.querySelector('.container');
     let subtitulo = document.querySelector('.subtitulo');
     let destacado = document.querySelectorAll('p');
-    let fondo = document.querySelector('body');
     let enlace = document.querySelector('a');
     
     subtitulo.innerHTML += ' INVITADX';
     
-        
     subtitulo.style.textTransform = 'uppercase';
     
-    fondo.classList.add('fondo');
     enlace.style.color = 'white';
     
     for(let i = 0 ; i < destacado.length; i++){
@@ -22,6 +19,8 @@ window.onload = function(){
         }
     }
     
-
-    container.style.display = 'block';
+   // container.style.display = 'block';
 }
+
+
+

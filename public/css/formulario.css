@@ -18,13 +18,19 @@
     margin: 0;
     padding: 0;
   }
+
+  .img-index {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    }
   
   #root {
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  /* Botón Volver al listado */
+ 
   .botonVolver {
     display: inline-block;
     padding: 10px 20px;
@@ -42,7 +48,7 @@
     background-color: #2980b9;
   }
   
-  /* Estilos del formulario */
+ 
   .formulario {
     margin: auto;
     width: 60%;
@@ -69,10 +75,10 @@
   }
   
   .formulario input[type="date"] {
-    width: calc(100% - 22px); /* Ajusta el ancho para incluir el padding y border */
+    width: calc(100% - 22px); 
   }
   
-  /* Botones del formulario */
+
   .action {
     text-align: center;
   }
@@ -112,7 +118,7 @@
     background-color: #e74c3c;
   }
   
-  /* Responsive */
+  
   @media screen and (max-width: 600px) {
     .formulario {
       width: 90%;

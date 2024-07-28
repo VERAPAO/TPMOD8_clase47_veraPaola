@@ -4,6 +4,7 @@ const moviesHtmlController = require('../controllers/moviesHtmlController');
 const moviesHtmlFormularioController = require('../controllers/moviesHtmlFormularioController')
 const moviesHtmlIndexController = require('../controllers/moviesHtmlIndexController')
 const moviesHtmlFormularioCreateController = require('../controllers/moviesHtmlFormularioCreateController')
+const moviesHtmlFavoritasController = require('../controllers/moviesHtmlFavoritasController')
 //const moviesAPIController = require('../controllers/api/moviesAPIController')
 
 //Rutas
@@ -14,6 +15,11 @@ router.get('/listado', moviesHtmlController.home);
 //router.get('/formularios', moviesHtmlFormularioController.form)
 router.get('/formularios', moviesHtmlFormularioCreateController.formCreate);
 router.get('/formularios/:id', moviesHtmlFormularioController.form);
+//películas favoritas
+router.get('/favoritas', moviesHtmlFavoritasController.favorites)
+
+
+
 
 // Obtener detalles de una película específica
 //router.get('/api/movies/:id', moviesAPIController.detail);
